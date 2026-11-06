@@ -113,11 +113,6 @@ namespace ZombieParty.Controllers
             return RedirectToAction("Index");
         }
 
-        public bool HasAssociatedZombies(int id)
-        {
-            var associatedZombies = _serviceZT.GetByIdAsync(x => x.ZombieTypeId == id).Any();
-            return associatedZombies;
-        }
 
     }
 }
